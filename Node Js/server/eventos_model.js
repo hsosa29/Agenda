@@ -1,6 +1,6 @@
 let mongoose = require('mongoose'), 
     Schema = mongoose.Schema, 
-    Usuarios = require('./modelUsuarios'),
+    Usuarios = require('./usuarios_model'),
     autoIncrement = require('mongoose-auto-increment'), 
 
     EventSchema = new Schema({ 
@@ -13,6 +13,6 @@ let mongoose = require('mongoose'),
 autoIncrement.initialize(connection) 
 EventSchema.plugin(autoIncrement.plugin, {model: 'Evento', startAt: 1} ); 
 
-let EventoModel = mongoose.model('Evento', EventSchema) 
+let eventos_model = mongoose.model('Evento', EventSchema) 
 
-module.exports = EventoModel 
+module.exports = eventos_model 

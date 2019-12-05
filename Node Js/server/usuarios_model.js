@@ -7,6 +7,6 @@ let UserSchema = new Schema({
   password: { type: String, required: true}, 
   })
 
-let UsuarioModel = mongoose.model('Usuario', UserSchema) 
+let usuarios_model = mongoose.model('Usuario', UserSchema) 
 
-module.exports = UsuarioModel 
+module.exports = usuarios_model 
